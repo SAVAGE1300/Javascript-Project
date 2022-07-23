@@ -105,7 +105,7 @@ function savePhone() {
                 break;
             }
         }
-        obj = {id: selectedId, model: formModel, quantity: document.getElementById("countryName").value, color: Color};
+        obj = {id: selectedId, model: formModel, quantity: document.getElementById("countryName").value + " (editted)", color: Color};
         phoneList[index] = obj;
     }
 
