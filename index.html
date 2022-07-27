@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>web </title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="java.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body{
+        margin-top: 50px;
+    }
+    .span{
+        font-size: 40px;
+        color: black;
+        font-family: "Cambria Math",sans-serif;
+        font-weight: 100;
+
+    }
+</style>
+<body>
+
+
+
+<h1 style="width: 100%" class="text-center sma">Add <i class="fas text-warning">Smartphones</i> to your wishlist</h1>
+
+
+
+
+<div style="width: 100%" class="container con1 text-center align-content-center justify-content-center">
+    <form class="text-center  align-content-center justify-content-center" id="person-form">
+
+        <div class="form-group mt-lg-5 pb-2 mod text-center align-content-center justify-content-center">
+            <label  class="sma " for="model"><span class="span sma">Model</span></label> <br>
+            <select name="smartSelect" id="model" required>
+                <option value="Samsung Galaxy M12">Samsung Galaxy M12</option>
+                <option value="Samsung Galaxy S9">Samsung Galaxy S9</option>
+                <option value="Samsung Galaxy S21 Ultra">Samsung Galaxy S21 Ultra</option>
+                <option value="Samsung Galaxy S24 Ultra">Samsung Galaxy S22 Ultra</option>
+                <option value="Samsung Galaxy S23 Ultra">Samsung Galaxy S23 Ultra</option>
+                <option value="Iphone 9">Iphone 9</option>
+                <option value="Iphone XYZ PRO MAX Ultra ++">Iphone XYZ PRO MAX Ultra ++</option>
+                <option value="NOKIA 1202 (New Version)">NOKIA 1202 (New Version)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label class="tex" for="quantity">Number of items</label>
+            <input type="number" id="quantity" class="form-control inpu">
+<!--            <h6>Ta donasi <br> <i id="sum"  class="fas text-warning"></i> $</h6>-->
+        </div>
+
+        <div class="form-group">
+            <label class="tex" for="color">Choose color</label>
+            <select class="inpu" name="selectColor" id="color" required>
+                <option value="black">Black</option>
+                <option value="yellow">Yellow</option>
+                <option value="white">White</option>
+                <option value="pink">Pink</option>
+                <option value="blue">Blue</option>
+            </select>
+        </div>
+
+
+
+        <button id="button" onclick="showModal()" type="button" value="Add a person" class="btn btn-danger ">Add to wishlist</button>
+
+    </form>
+</div>
+
+
+
+
+
+
+
+
+<div style="width: 100% " class="container pb-lg-5 mt-5">
+    <table class="table text-center table-striped">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Model</th>
+            <th>How many</th>
+            <th>Color</th>
+            <th colspan="2">Functions</th>
+        </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!--DELETE MODAL-->
+
+<div style="width: 100%" class="modal" id="deleteModal" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Deleting smartphone</h4>
+                <button type="button" class="close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="name">Are you sure you want to delete this phone</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" onclick="deleteModalClose()" >No</button>
+                <button type="button" class="btn btn-danger"  onclick="deleteCountry()" >Yes</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--DELETE MODAL-->
+
+
+
+
+
+
+
+
+<!--EDIT MODAL--------------------------------------------------------------- -->
+
+<div class="modal" id="editModal" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="modalHeader">Edit quantity of smartphones in your wishlist</h4>
+                <button type="button" class="close" onclick="modalYopish()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <input type="number" class="form-control" id="countryName" required>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" onclick="modalYopish()">Close</button>
+                <button type="button" class="btn btn-success" onclick="savePhone()">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--EDIT MODAL--------------------------------------------------------------- -->
+
+
+
+
+
+
+
+
+
+<!-- SHowmodal---------------------------------------------------------------- -->
+
+<div style="width: 100%" class="modal" id="countryModal" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document">
+
+        <!-- Modal content-->
+    <div class="modal-content">
+            <div class="modal-header">
+                <h4 id="modalHeaderAdd"></h4>
+                <button type="button" class="close" onclick="closeAddModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p >Add to wishlist?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" onclick="savePhone()">Yes</button>
+                <button type="button" class="btn btn-light" onclick="closeAddModal()">No</button>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<!-- SHowmodal---------------------------------------------------------------- -->
+
+
+
+
+
+
+
+
+
+<script src="java.js"></script>
+
+<script src="jquery-3.3.1.slim.min.js"></script>
+<script src="popper.min.js"></script>
+<script src="bootstrap.min.js"></script>
+</body>
+</html>
