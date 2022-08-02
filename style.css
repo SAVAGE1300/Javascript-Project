@@ -1,0 +1,31 @@
+#model {
+  width: 300px; }
+
+#quantity {
+  margin: 0 auto;
+  width: 300px; }
+
+.m-auto {
+  margin: 0 auto; }
+
+@media screen and (max-width: 500px) {
+  body {
+    width: 100%; }
+
+  .container {
+    height: 100%; }
+
+  .con1 form .mod {
+    margin: 0 auto; }
+
+  .sma {
+    font-size: 24px;
+    margin-top: 20px; }
+
+  .inpu {
+    width: 200px; }
+
+  .tex {
+    margin-top: 40px; } }
+
+/*# sourceMappingURL=style.css.map */
